@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <style>
+        body
+        {
+            background-color: rgb(255, 228, 196);
+        }
+		.Total
+		{
+		    display: flex;
+		}
+		.sidenav{
+		    display: flex;
+		    flex-direction: column;
+		    padding-top: 10px;
+		    position: fixed;
+		}
+		.details{
+		    padding-top: 30px;
+		}
+		
+		button{
+		    width: 90px;
+		}
+		.add
+		{
+		    margin-top: 50px;
+		}
+		.view
+		{
+		    margin-top: 30px;
+		}
+		.delete
+		{
+		    margin-top: 30px;
+		}
+		.signout
+		{
+		    margin-top: 250px;
+		}
+        .blog {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin-left: 200px;
+            gap: 25px 10px;
+        }
+        .blogitem {
+            display: flex;
+            flex-direction: column;
+            justify-items: flex-start;
+			justify-items: space-evenly;
+            padding: 20px;
+            width: 350px;
+            border: 1px solid black;
+            border-radius: 5%;
+            font-weight: 3px;
+            font-size: 18px;
+        }
+        button
+        {
+            background-color: bisque;
+        }
+        @media screen and (max-width: 1200px) {
+            .blog {
+                grid-template-columns: auto auto;
+            }
+            form {
+                padding-left: 20%;
+            }
+        }
+        
+        @media screen and (max-width: 900px) {
+            .blog {
+                grid-template-columns: auto;
+            }
+            form {
+                padding-left: 10%;
+            }
+        }
+	</style>
+	<script>
+		        function redirectToAddblog() {
+		            window.location.href = "addblog";
+		        }
+		    </script>
+</head>
+<body>
+    <div class="Total">
+    <div class="sidenav">
+       <div class="details"> Uname</div>
+       <div class="details"> Name</div>
+       <div class="details"> Gender</div>
+       <div class="details"> Email</div>
+       <div class="details"> Phone</div>
+       <button class="add" onclick="redirectToAddblog()">Addpost</button>
+       <button class="view">viewpost</button>
+       <button class="delete">deletepost</button>
+       <button class="signout">signout</button>
+    </div>
+    <div class="blog">
+        <div class="blogitem" th:each="blog : ${blogs}">
+            <h2 th:text="${blog.blogname}">Blog Title</h2>
+            <br>
+            <p th:text="${blog.blogtext}">Blog Content</p>
+            <br>
+            <h3 th:text="${blog.Uname}">Author</h3>
+            <br>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

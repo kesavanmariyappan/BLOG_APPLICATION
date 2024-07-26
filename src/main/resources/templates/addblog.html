@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add your blog </title>
+    <style>
+       body {
+	        background-image: url(../images/addblog.jpg);
+	        background-repeat: no-repeat;
+	        background-size: cover;
+	        display: flex;
+	        justify-content: center; 
+	        align-items: center;
+	        height: 100vh; 
+        }
+        .top
+        {
+            border-color: 1px black;
+            border-radius: 30px;           
+            display:flex;
+            width: 450px;
+            height: 700px; 
+            flex-direction: column;
+            align-items: center;
+            background-color:rgb(89, 15, 61);
+        }
+        .box
+        {
+            border-radius: 5px;
+            height: 30px;
+            width: 300px;
+            margin-top: 50px;
+            margin-right: 80px;
+			margin-left: 60px;
+			margin-bottom: 10px;
+        }
+        .posts
+        {
+            margin-top: 10px;
+        }
+        .content
+        {
+            height: 400px;
+			margin-left: 30px;
+        }
+        .submit
+        {
+            width: 80px;
+            height: 40px;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-left: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h1>LETSBLOG</h1>
+    
+    <div class="posts">
+        <form action="submitblog" method="post">
+			<input type="text" class="box" placeholder="Name of your blog" name="bname">
+            <textarea class="content" name="blog" rows="8" cols="50" placeholder="Write your blog here..."></textarea><br>
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+</div>
+
+    
+</body>
+</html>

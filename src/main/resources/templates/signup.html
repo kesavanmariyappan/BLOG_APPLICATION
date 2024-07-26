@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./signup.jsp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<script>
+    function signup(){
+        window.alert="siguped";
+    }
+</script>
+<style>
+	body{
+	    background-color:  rgb(120, 183, 219);
+	}
+	.continer{
+	    width: 500px;
+	    height: 430px;
+	    margin: 8% auto 10% ;
+	    border: 3px solid rgba(136, 150, 159, 0.167);
+	    border-radius: 10px;
+	    position: relative;
+	    background-color: rgba(62, 96, 116, 0.386);
+	}
+	h1{
+	    margin-left: 30%;
+	}
+	.name{
+	    margin: 10px 0 0 30px;
+	    position: absolute;
+	}
+	.uname{
+	    position: absolute;
+	    margin: 10px 0 0 300px ;
+	}
+	.email{
+	    position: absolute;
+	    margin: 80px 0 0 30px;
+	}
+	.num{
+	    position: absolute;
+	    margin: 80px 0 0 300px;
+	}
+	.pass{
+	    position: absolute;
+	    margin: 150px 0 0 30px;
+	}
+	.cpass{
+	    position: absolute;
+	    margin: 150px 0 0 300px;
+	}
+	.gender{
+	    position: absolute;
+	    margin: 220px 0 0 30px;
+	}
+	.cbox{
+	    position: absolute;
+	    margin: 260px 0 0 30px;
+		align-items: center;
+	}
+	button{
+	    margin: 290px 220px 0;
+	    border-color: rgb(106, 112, 118);
+	    border-radius: 5px;
+	    position: absolute;
+	    background: transparent;
+	}
+	#d input{
+	    background: transparent;
+	    margin-top: 5px;
+	    border-left: transparent;
+	    border-right: transparent;
+	    border-top:  transparent;
+	    border-bottom: 2px solid;
+	}
+</style>
+<body>
+    <div class="continer">
+        <form action="signup" method="post">
+            <div id="d">
+                <h1>Registeration</h1>
+                <div class="name">
+                    <label for="fname"><i class="fa-solid fa-user"></i> Full Name</label><br>
+                    <input type="text" id="nname" name="name" placeholder="Enter the name" required>
+                </div>
+                <div class="uname">
+                    <label for="uname"> <i class="fa-solid fa-user"></i> User Name</label><br>
+                    <input type="text" id="uname" name="uname"
+					placeholder="Enter the Username" required>
+                </div>
+                <div class="email">
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Email</label><br>
+                    <input type="email" id="email" name="email" placeholder="Enter the email">
+                </div>
+                <div class="num">
+                    <label for="num"><i class="fa-solid fa-phone"></i> Phone Number</label><br>
+                    <input type="number" name="phone" id="num" placeholder="Enter the number">
+                </div>
+                <div class="pass">
+                    <label for="pass"><i class="fa-solid fa-lock"></i> Password</label><br>
+                    <input type="password" id="pass" name="password" placeholder="Enter the password">
+                </div>
+                <div class="cpass">
+                    <label for="cpass"><i class="fa-solid fa-lock"></i> Confirm Password</label><br>
+                    <input type="password" id="cpass"  placeholder="confirm the password">
+                </div>
+            </div>
+            <div class="gender">
+				<label for="gender"></i> Gender</label><br>
+				<input type="text"  name="gender"  id="gender">
+            </div>
+            <div class="cbox">
+                <input type="checkbox" id="tick" required>
+                <label for="tick">I Have checked above</label>
+            </div>
+            <button>Register</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+	<style>
+		body{
+		    background-color:  rgb(120, 183, 219);
+		}
+		
+		.continer{
+		    width: 300px;
+		    height: 400px;
+		    margin: 11% auto 10% ;
+		    border: 3px solid rgba(136, 150, 159, 0.167);
+		    border-radius: 10px;
+		    position: relative;
+		    background-color:  rgba(62, 96, 116, 0.386);
+		
+		}
+		h1{
+		    margin-left: 35%;
+		
+		}
+		.uname{
+		    margin:0 30px 0 ;
+		    position: absolute;
+		}
+		.pass{
+		    margin: 70px 30px 0;
+		    position: absolute;
+		}
+		.cbox{
+		    margin: 150px 30px 0 ;
+		    position: absolute;
+		}
+		.fpass{
+		    margin: 145px 200px 0 ;
+		    position: absolute;
+		}
+		button{
+		    margin:210px 43% 0 ;
+		    background: transparent;
+		}
+		.last{
+		    margin: 20px 70px 0 ;
+		}
+		input{
+		    margin: 10px 0 0;
+		    background: transparent;
+		}
+		.d input{
+		    
+		    border-left: transparent;
+		    border-right: transparent;
+		    border-top:  transparent;
+		    border-bottom: 2px solid;
+		}
+	</style>
+	</head>
+<body>
+    <div class="continer">
+        <form action="login" method="post">
+            <div class="d">
+                <h1>login</h1>
+                <div class="uname">
+                    <label for="uname"><i class="fa-solid fa-user"></i> Username</label><br>
+                    <input type="text" id="uname" name="uname" placeholder="Enter the Username" >
+                </div>
+                <div class="pass">
+                    <label for="pass"><i class="fa-solid fa-lock"></i> Password</label><br>
+                    <input type="password" id="password" name="password" placeholder="Entwr the password">
+                </div>
+            </div>
+                <div class="cbox">
+                    <input type="checkbox" id="cbox">
+                    <label for="cbox">Keep me login</label>
+                </div>
+                <div class="fpass">
+                    <label for=""><a href="">forgot password?</a></label>
+                </div>
+                    <button>Login</button>
+                <div class="last">
+                    <label for="">Need an account?<a href="signup">Signup</a></label>
+                </div>
+        </form>
+    </div>
+    
+</body>
+</html>
